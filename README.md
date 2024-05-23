@@ -31,7 +31,7 @@ The front-end web application provides a robust solution for event management. W
 - **React.js:**
 - **React Router:** 
 - **Tailwind CSS:**
-- - **Redux:**
+  - **Redux:**
 
 
 ## Setup Instructions
