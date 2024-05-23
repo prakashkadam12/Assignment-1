@@ -1,15 +1,38 @@
-# Front-End Web Application
+# Front End Web Application
 
 ## Overview
 This is a full-stack web application for displaying product listings and details. It allows users to browse available products, view product details, and navigate between different pages.
 
-## Features
-- Landing page with a button to explore product listings.
-- Product list page displaying available products with basic information.
-- Product details page showing detailed information about a specific product.
+## Key Features:
 
+1. **Comments Section:**
+   - Users can add and edit comments associated with events, facilitating collaboration and communication.
+2. **Click-to-Edit Event Details:**
+   - Enables users to modify event details directly within the modal, enhancing the user experience by reducing the need for multiple screens or forms.
+3. **Assign Person to Event:**
+   - Offers an intuitive dropdown menu to assign individuals to events, streamlining task delegation and organization.
+4. **Mark Event Status as Complete:**
+   - Provides a convenient feature to mark event statuses as complete, aiding in tracking progress and managing ongoing tasks effectively.
+
+## Functionalities:
+
+### 1. Comments Section
+- Users can add and edit comments associated with events.
+### 2. Click-to-Edit Event Details
+- Allows users to modify event details directly within the modal by clicking on them.
+### 3. Assign Person to Event
+- Provides an option to assign a person to the event via a dropdown menu.
+### 4. Mark Event Status as Complete
+- Features a functionality to mark the event status as complete.
+  
 ## Technologies Used
-- Frontend: React.js, React Router, Tailwind css
+
+### Frontend:
+- **React.js:**
+- **React Router:** 
+- **Tailwind CSS:**
+
+- 
 ## Setup Instructions
 
 ### Frontend Setup:
@@ -18,11 +41,6 @@ This is a full-stack web application for displaying product listings and details
 ```sh
 git clone https://github.com/your-username/simplified-product-app.git
 ```
-2. Navigate to the Frontend directory:
-```sh
-cd simplified-product-app/frontend
-```
-
 3. Install dependencies:
 ```sh
 npm install
@@ -34,19 +52,17 @@ npm start
 
 5. Open your web browser and go to [http://localhost:3000](http://localhost:3000) to view the application.
 
-
-## Design Decisions
-- **Frontend**: Designed a simple and intuitive user interface using React.js and Bootstrap to enhance user experience.
-- **Backend**: Implemented a RESTful API using Node.js and Express.js to handle data retrieval and manipulation.
-- **Database**: Utilized MongoDB to store product data, providing flexibility and scalability for future enhancements.
-- **Challenges**: Faced challenges in handling asynchronous operations and managing state in React components. Overcame them by using useEffect hook for fetching data and managing state effectively.
-
 ## Future Improvements
-- Implement user authentication and authorization for secure access.
-- Add functionality for users to add products to their cart and make purchases.
-- Enhance the design with more interactive features and animations.
-- implement barcodeScanner to scan the products to directly add to the cart.
-- below is the reference code for using quagga API, you can also find it in the barcodeScanner.js in components section. 
+1. **User Authentication:** Implement user authentication functionality to secure access to the application and personalize user experiences.
+3. **Data Persistence:** Integrate a backend database solution to persistently store event data, enabling users to access their information across sessions.
+4. **Real-time Updates:** Implement real-time updates using technologies like WebSockets or server-sent events to reflect changes made by other users instantly.
+5. **Additional Features:** Explore adding additional features such as event reminders, file attachments, or integration with external calendars.
+6. **Performance Optimization:** Optimize application performance by reducing load times and improving rendering efficiency, especially for large datasets.
+7. **Accessibility:** Enhance accessibility features to ensure that the application is usable by individuals with disabilities, following WCAG guidelines.
+8. **Localization:** Add support for multiple languages to make the application accessible to users from different regions.
+
+These improvements can help enhance the functionality, usability, and overall user experience of the application in future versions.
+
   ```sh
 
   ```
