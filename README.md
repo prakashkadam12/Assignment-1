@@ -1,7 +1,7 @@
 # Front End Web Application
 
 ## Overview
-The Front End Web Application is a comprehensive solution designed to streamline event management tasks with a user-friendly interface and robust functionalities. This application caters to the needs of users who require efficient event organization and collaboration tools.
+The front-end web application provides a robust solution for event management. Within the React-based "Event" component, users can efficiently handle event specifics including title, date, assignee, and notes, with seamless comment functionality. Leveraging Redux for state management, it integrates diverse UI components for user interaction and applies meticulous styling for an engaging visual experience.
 
 ## Key Features:
 
