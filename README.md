@@ -1,7 +1,7 @@
 # Front End Web Application
 
 ## Overview
-This is a full-stack web application for displaying product listings and details. It allows users to browse available products, view product details, and navigate between different pages.
+The Front End Web Application is a comprehensive solution designed to streamline event management tasks with a user-friendly interface and robust functionalities. This application caters to the needs of users who require efficient event organization and collaboration tools.
 
 ## Key Features:
 
@@ -15,7 +15,6 @@ This is a full-stack web application for displaying product listings and details
    - Provides a convenient feature to mark event statuses as complete, aiding in tracking progress and managing ongoing tasks effectively.
 
 ## Functionalities:
-
 ### 1. Comments Section
 - Users can add and edit comments associated with events.
 ### 2. Click-to-Edit Event Details
@@ -24,6 +23,15 @@ This is a full-stack web application for displaying product listings and details
 - Provides an option to assign a person to the event via a dropdown menu.
 ### 4. Mark Event Status as Complete
 - Features a functionality to mark the event status as complete.
+
+ ## Future Improvements
+1. **User Authentication:** Implement user authentication functionality to secure access to the application and personalize user experiences.
+3. **Data Persistence:** Integrate a backend database solution to persistently store event data, enabling users to access their information across sessions.
+4. **Real-time Updates:** Implement real-time updates using technologies like WebSockets or server-sent events to reflect changes made by other users instantly.
+5. **Additional Features:** Explore adding additional features such as event reminders, file attachments, or integration with external calendars.
+6. **Performance Optimization:** Optimize application performance by reducing load times and improving rendering efficiency, especially for large datasets.
+7. **Accessibility:** Enhance accessibility features to ensure that the application is usable by individuals with disabilities, following WCAG guidelines.
+8. **Localization:** Add support for multiple languages to make the application accessible to users from different regions.
   
 ## Technologies Used
 
@@ -52,16 +60,7 @@ npm start
 
 5. Open your web browser and go to [http://localhost:3000](http://localhost:3000) to view the application.
 
-## Future Improvements
-1. **User Authentication:** Implement user authentication functionality to secure access to the application and personalize user experiences.
-3. **Data Persistence:** Integrate a backend database solution to persistently store event data, enabling users to access their information across sessions.
-4. **Real-time Updates:** Implement real-time updates using technologies like WebSockets or server-sent events to reflect changes made by other users instantly.
-5. **Additional Features:** Explore adding additional features such as event reminders, file attachments, or integration with external calendars.
-6. **Performance Optimization:** Optimize application performance by reducing load times and improving rendering efficiency, especially for large datasets.
-7. **Accessibility:** Enhance accessibility features to ensure that the application is usable by individuals with disabilities, following WCAG guidelines.
-8. **Localization:** Add support for multiple languages to make the application accessible to users from different regions.
 
-These improvements can help enhance the functionality, usability, and overall user experience of the application in future versions.
 
   ```sh
 
