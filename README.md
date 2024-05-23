@@ -1,70 +1,152 @@
-# Getting Started with Create React App
+# Simplified Product Display Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This is a full-stack web application for displaying product listings and details. It allows users to browse available products, view product details, and navigate between different pages.
 
-## Available Scripts
+## Features
+- Landing page with a button to explore product listings.
+- Product list page displaying available products with basic information.
+- Product details page showing detailed information about a specific product.
 
-In the project directory, you can run:
+## Technologies Used
+- Frontend: React.js, React Router, Bootstrap
+- Backend: Node.js, Express.js, MongoDB
+- Other: Axios for API requests
 
-### `npm start`
+## Setup Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Frontend Setup:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository from GitHub:
+```sh
+git clone https://github.com/your-username/simplified-product-app.git
+```
+2. Navigate to the Frontend directory:
+```sh
+cd simplified-product-app/frontend
+```
 
-### `npm test`
+3. Install dependencies:
+```sh
+npm install
+```
+4. Start the development server:
+```sh
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. Open your web browser and go to [http://localhost:3000](http://localhost:3000) to view the application.
 
-### `npm run build`
+### Backend Setup:
+1. Navigate to the Backend Directory
+```sh
+cd ../backend
+```
+2. Install Dependencies:
+```sh
+npm install
+```
+3. Start the Backend Server:
+ ```sh
+   npm start
+ ```
+4. Access the API Endpoints:
+The backend server will be running on [https://localhost:5000](http://localhost:5000). Use this base URL to access the API endpoints.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## API Endpoints
+- **GET /api/productsList**: Fetches all available products list.
+- **GET /api/productsList/:id**: Fetches details of a specific product by ID.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Design Decisions
+- **Frontend**: Designed a simple and intuitive user interface using React.js and Bootstrap to enhance user experience.
+- **Backend**: Implemented a RESTful API using Node.js and Express.js to handle data retrieval and manipulation.
+- **Database**: Utilized MongoDB to store product data, providing flexibility and scalability for future enhancements.
+- **Challenges**: Faced challenges in handling asynchronous operations and managing state in React components. Overcame them by using useEffect hook for fetching data and managing state effectively.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Screenshot
+- **Frontend**:
+![frontend_screenshot.png](https://github.com/prathmesh12-coder/simplified-product-display/blob/main/images/frontend-1.png)
 
-### `npm run eject`
+![frontend_screenshot.png](https://github.com/prathmesh12-coder/simplified-product-display/blob/main/images/frontend-2.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![frontend_screenshot.png](https://github.com/prathmesh12-coder/simplified-product-display/blob/main/images/frontend-3.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![frontend_screenshot.png](https://github.com/prathmesh12-coder/simplified-product-display/blob/main/images/frontend-4.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Backend**:
+![frontend_screenshot.png](https://github.com/prathmesh12-coder/simplified-product-display/blob/main/images/backend-1.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![frontend_screenshot.png](https://github.com/prathmesh12-coder/simplified-product-display/blob/main/images/backend-2.png)
 
-## Learn More
+- **database**:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![frontend_screenshot.png](https://github.com/prathmesh12-coder/simplified-product-display/blob/main/images/database.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Future Improvements
+- Implement user authentication and authorization for secure access.
+- Add functionality for users to add products to their cart and make purchases.
+- Enhance the design with more interactive features and animations.
+- implement barcodeScanner to scan the products to directly add to the cart.
+- below is the reference code for using quagga API, you can also find it in the barcodeScanner.js in components section. 
+  ```sh
+ 
+    useEffect(() => {
+        if (!videoRef.current) return;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+        Quagga.init({
+            inputStream: {
+                name: "Live",
+                type: "LiveStream",
+                target: videoRef.current,
+                constraints: {
+                    width: 640,
+                    height: 480,
+                    facingMode: "environment", // Use the device's rear camera
+                },
+            },
+            decoder: {
+                readers: ["ean_reader"], // Specify the type of barcode to scan (EAN)
+            },
+        }, function (err) {
+            if (err) {
+                console.error("Error initializing Quagga:", err);
+                return;
+            }
+            console.log("Quagga initialized successfully");
+            Quagga.start();
+        });
 
-### Analyzing the Bundle Size
+        Quagga.onDetected(function (result) {
+            const code = result.codeResult.code;
+            alert(`Scanned Barcode: ${code}`);
+            Quagga.stop();
+        });
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+        return () => {
+            Quagga.stop();
+        };
+    }, [videoRef]); // Added videoRef to the dependency array
 
-### Making a Progressive Web App
+    return (
+        <div>
+            <h1>This is Barcode Scanner!!</h1>
+            <video ref={videoRef} style={{ width: '100%', height: 'auto' }}></video>
+        </div>
+    );
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+  ```
+  -Github repo for reference:
+  
+  Barcode Scanner (not supported for Desktop)
+  ```sh
+  https://github.com/tony-xlh/react-barcode-qrcode-scanner?tab=readme-ov-file
+  ```
+  QR Scanner
+  ```sh
+  https://github.com/chung-leong/react-barcode-detection?tab=readme-ov-file
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  ```
+  
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
