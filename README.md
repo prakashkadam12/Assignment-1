@@ -47,7 +47,7 @@ The Front End Web Application is a comprehensive solution designed to streamline
 
 1. Clone the repository from GitHub:
 ```sh
-git clone https://github.com/your-username/simplified-product-app.git
+git clone https://github.com/your-username/assignment-1.git
 ```
 3. Install dependencies:
 ```sh
@@ -59,10 +59,6 @@ npm start
 ```
 
 5. Open your web browser and go to [http://localhost:3000](http://localhost:3000) to view the application.
-
-
-
-  ```sh
 
   ```
   -Github repo for reference:
