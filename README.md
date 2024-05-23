@@ -24,14 +24,6 @@ The Front End Web Application is a comprehensive solution designed to streamline
 ### 4. Mark Event Status as Complete
 - Features a functionality to mark the event status as complete.
 
- ## Future Improvements
-1. **User Authentication:** Implement user authentication functionality to secure access to the application and personalize user experiences.
-3. **Data Persistence:** Integrate a backend database solution to persistently store event data, enabling users to access their information across sessions.
-4. **Real-time Updates:** Implement real-time updates using technologies like WebSockets or server-sent events to reflect changes made by other users instantly.
-5. **Additional Features:** Explore adding additional features such as event reminders, file attachments, or integration with external calendars.
-6. **Performance Optimization:** Optimize application performance by reducing load times and improving rendering efficiency, especially for large datasets.
-7. **Accessibility:** Enhance accessibility features to ensure that the application is usable by individuals with disabilities, following WCAG guidelines.
-8. **Localization:** Add support for multiple languages to make the application accessible to users from different regions.
   
 ## Technologies Used
 
