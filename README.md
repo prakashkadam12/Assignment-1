@@ -40,7 +40,6 @@ The Front End Web Application is a comprehensive solution designed to streamline
 - **React Router:** 
 - **Tailwind CSS:**
 
-- 
 ## Setup Instructions
 
 ### Frontend Setup:
