@@ -1,4 +1,4 @@
-# Simplified Product Display Web Application
+# Front-End Web Application
 
 ## Overview
 This is a full-stack web application for displaying product listings and details. It allows users to browse available products, view product details, and navigate between different pages.
