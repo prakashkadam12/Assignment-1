@@ -54,11 +54,11 @@ npm start
   
   Barcode Scanner (not supported for Desktop)
   ```sh
-  https://github.com/tony-xlh/react-barcode-qrcode-scanner?tab=readme-ov-file
+  https://github.com/tony-xlh/Assignment-1?tab=readme-ov-file
   ```
   QR Scanner
   ```sh
-  https://github.com/chung-leong/react-barcode-detection?tab=readme-ov-file
+  https://github.com/chung-leong/Assignment-1?tab=readme-ov-file
 
   ```
   
