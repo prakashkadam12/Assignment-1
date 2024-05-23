@@ -59,17 +59,6 @@ npm start
 
 5. Open your web browser and go to [http://localhost:3000](http://localhost:3000) to view the application.
 
-  ```
-  -Github repo for reference:
-  
-  Barcode Scanner (not supported for Desktop)
-  ```sh
-  https://github.com/tony-xlh/Assignment-1?tab=readme-ov-file
-  ```
-  QR Scanner
-  ```sh
-  https://github.com/chung-leong/Assignment-1?tab=readme-ov-file
 
-  ```
   
 
